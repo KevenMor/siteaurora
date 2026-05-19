@@ -18,36 +18,36 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <section id="como-funciona" className="bg-[#F5F5F5] px-6 py-24">
+    <section id="como-funciona" className="bg-[#F5F5F5] px-4 md:px-6 py-16 md:py-24">
       <div className="max-w-[88rem] mx-auto">
-        <div className="mb-16">
-          <p className="text-black/60 text-sm mb-2">Processo</p>
+        <div className="mb-10 md:mb-16">
+          <p className="text-black/60 text-xs md:text-sm mb-2">Processo</p>
           <h2
-            className="text-black text-4xl md:text-5xl font-medium leading-tight"
+            className="text-black text-3xl md:text-5xl font-medium leading-tight"
             style={{ letterSpacing: '-0.03em' }}
           >
             Como funciona
           </h2>
-          <p className="text-black/60 text-base mt-4 max-w-md">
+          <p className="text-black/60 text-sm md:text-base mt-3 md:mt-4 max-w-md">
             Três passos simples, do primeiro contato à proposta personalizada.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="rounded-2xl p-8 min-h-64 flex flex-col justify-between"
+              className="rounded-2xl p-6 md:p-8 min-h-48 md:min-h-64 flex flex-col justify-between"
               style={{ backgroundColor: '#2B2644' }}
             >
-              <span className="text-white/30 text-6xl font-medium" style={{ letterSpacing: '-0.04em' }}>
+              <span className="text-white/30 text-5xl md:text-6xl font-medium" style={{ letterSpacing: '-0.04em' }}>
                 {step.number}
               </span>
               <div>
-                <h3 className="text-white text-xl font-medium mb-3" style={{ letterSpacing: '-0.02em' }}>
+                <h3 className="text-white text-lg md:text-xl font-medium mb-2 md:mb-3" style={{ letterSpacing: '-0.02em' }}>
                   {step.title}
                 </h3>
-                <p className="text-white/60 text-base leading-relaxed">{step.description}</p>
+                <p className="text-white/60 text-sm md:text-base leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}

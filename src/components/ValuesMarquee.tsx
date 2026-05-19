@@ -11,9 +11,9 @@ const values = [
 
 export default function ValuesMarquee() {
   return (
-    <section className="bg-[#F5F5F5] px-6 py-12">
-      <div className="max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
-        <p className="text-black/70 text-base leading-relaxed">
+    <section className="bg-[#F5F5F5] px-4 md:px-6 py-8 md:py-12">
+      <div className="max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center">
+        <p className="text-black/70 text-sm md:text-base leading-relaxed">
           Nossos valores guiam<br />cada operação que realizamos.
         </p>
         <div className="md:col-span-3 overflow-hidden">
@@ -32,7 +32,7 @@ export default function ValuesMarquee() {
             {[...values, ...values].map((item, i) => (
               <span
                 key={i}
-                className="mx-10 shrink-0 text-black/50 whitespace-nowrap"
+                className="mx-6 md:mx-10 shrink-0 text-black/50 whitespace-nowrap"
                 style={item.style}
               >
                 {item.name}

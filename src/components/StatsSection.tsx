@@ -7,18 +7,18 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="bg-[#F5F5F5] px-6 py-16">
+    <section className="bg-[#F5F5F5] px-4 md:px-6 py-12 md:py-16">
       <div className="max-w-[88rem] mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <p
-                className="text-black text-4xl md:text-5xl font-medium mb-2"
+                className="text-black text-3xl md:text-5xl font-medium mb-1 md:mb-2"
                 style={{ letterSpacing: '-0.03em' }}
               >
                 {stat.value}
               </p>
-              <p className="text-black/60 text-sm md:text-base">{stat.label}</p>
+              <p className="text-black/60 text-xs md:text-base">{stat.label}</p>
             </div>
           ))}
         </div>
