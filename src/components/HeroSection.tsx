@@ -26,23 +26,24 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/20 to-transparent pointer-events-none" />
         <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-white/55 via-white/20 to-transparent pointer-events-none" />
 
-        <div className="relative z-10 flex h-full flex-col justify-end">
-          <div className="w-full max-w-2xl p-6 md:p-10 md:pb-8">
+        <div className="relative z-10 flex h-full flex-col justify-end lg:justify-center lg:pb-20">
+          <div className="w-full max-w-xl p-6 md:p-10 lg:px-12 lg:py-0">
             <p className="text-black/50 text-[11px] md:text-xs font-medium tracking-[0.14em] uppercase mb-3 md:mb-4">
               Securitizadora de recebíveis
             </p>
 
             <h1
-              className="text-black text-[2.5rem] md:text-[4.25rem] font-medium leading-[1.02] tracking-[-0.04em] mb-5 md:mb-6"
+              className="text-black font-medium tracking-[-0.04em] mb-4 md:mb-5 text-[clamp(2.125rem,1.6vw+1.5rem,3.125rem)] leading-[1.08]"
             >
-              Seu capital<br />trabalha por você
+              <span className="block">Seu capital trabalha</span>
+              <span className="block">por você</span>
             </h1>
 
-            <div className="space-y-3 md:space-y-3.5 mb-7 md:mb-8 max-w-lg">
-              <p className="text-black text-base md:text-xl leading-snug font-medium">
+            <div className="space-y-2.5 md:space-y-3 mb-6 md:mb-7 max-w-md">
+              <p className="text-black text-[clamp(1rem,0.35vw+0.9rem,1.25rem)] leading-snug font-medium">
                 Transforme recebíveis em caixa com agilidade, transparência e estrutura regulatória.
               </p>
-              <p className="text-black/60 text-sm md:text-base leading-relaxed">
+              <p className="text-black/60 text-sm md:text-[0.95rem] leading-relaxed">
                 Para empresas que faturam a prazo e precisam de liquidez imediata — sem abrir mão da segurança jurídica.
               </p>
             </div>
@@ -55,7 +56,7 @@ export default function HeroSection() {
             </button>
           </div>
 
-          <div className="relative w-full overflow-hidden pb-5 md:pb-6">
+          <div className="relative w-full overflow-hidden pb-5 md:pb-6 lg:absolute lg:bottom-0 lg:left-0 lg:right-0">
             <div className="absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-[#F5F5F5]/90 to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-[#F5F5F5]/90 to-transparent z-10 pointer-events-none" />
             <style>{`
