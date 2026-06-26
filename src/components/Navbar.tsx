@@ -43,10 +43,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button className="hidden md:block bg-black text-white text-base font-medium px-7 py-2.5 rounded-full hover:bg-gray-800 transition-colors duration-200">
-          Área do Cliente
-        </button>
-
         <button
           className="md:hidden p-2"
           onClick={() => setOpen(!open)}
@@ -69,12 +65,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#"
-              className="mt-2 bg-black text-white text-base font-medium px-7 py-2.5 rounded-full text-center hover:bg-gray-800 transition-colors duration-200"
-            >
-              Área do Cliente
-            </a>
           </div>
         </div>
       )}
