@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import auroraLogo from '../assets/aurora-logo.png';
+
+const LOGO_WIDTH = 625;
+const LOGO_HEIGHT = 193;
 
 const navLinks = [
   { label: 'Como Funciona', href: '#como-funciona' },
@@ -15,14 +19,17 @@ export default function Navbar() {
   return (
     <nav className="absolute top-0 left-0 right-0 z-20 px-4 md:px-6 py-4 md:py-5">
       <div className="flex items-center justify-between max-w-[88rem] mx-auto">
-        <div className="flex items-center gap-2">
+        <a href="#" className="shrink-0 leading-none">
           <img
-            src="https://aurora-asset.lovable.app/assets/aurora-logo-CJy8UtaD.jpeg"
+            src={auroraLogo}
             alt="Aurora Asset"
-            className="h-8 md:h-9 w-auto rounded"
+            width={LOGO_WIDTH}
+            height={LOGO_HEIGHT}
+            decoding="async"
+            className="h-11 md:h-12 w-auto max-w-none object-contain"
+            style={{ aspectRatio: `${LOGO_WIDTH} / ${LOGO_HEIGHT}` }}
           />
-          <span className="text-xl md:text-2xl font-medium tracking-tight text-black">Aurora Asset</span>
-        </div>
+        </a>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (

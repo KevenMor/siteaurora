@@ -23,27 +23,41 @@ export default function HeroSection() {
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_161253_c72b1869-400f-45ed-ac0c-52f68c2ed5bd.mp4"
         />
 
-        <div className="relative z-10 flex flex-col items-start justify-start h-full p-6 pt-24 md:p-12 md:pt-36">
-          <h1
-            className="text-black text-4xl md:text-6xl font-medium leading-tight max-w-xl mb-3 md:mb-4"
-            style={{ letterSpacing: '-0.04em' }}
-          >
-            Seu Capital<br />Trabalha
-          </h1>
-          <p
-            className="text-black/70 text-sm md:text-lg max-w-md mb-6 md:mb-8 leading-relaxed"
-            style={{ fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }}
-          >
-            Antecipe seus recebíveis com segurança, agilidade e transparência. Operações estruturadas para empresas que buscam liquidez imediata com estrutura regulatória e segurança jurídica.
-          </p>
-          <button className="inline-flex items-center gap-3 bg-black text-white text-sm md:text-lg font-medium pl-6 md:pl-8 pr-2 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200">
-            Solicitar Análise
-            <span className="bg-white rounded-full p-1.5 md:p-2">
-              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-black" />
-            </span>
-          </button>
+        <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-white/55 via-white/20 to-transparent pointer-events-none" />
 
-          <div className="mt-12 md:mt-24 w-full max-w-md overflow-hidden">
+        <div className="relative z-10 flex h-full flex-col justify-end">
+          <div className="w-full max-w-2xl p-6 md:p-10 md:pb-8">
+            <p className="text-black/50 text-[11px] md:text-xs font-medium tracking-[0.14em] uppercase mb-3 md:mb-4">
+              Securitizadora de recebíveis
+            </p>
+
+            <h1
+              className="text-black text-[2.5rem] md:text-[4.25rem] font-medium leading-[1.02] tracking-[-0.04em] mb-5 md:mb-6"
+            >
+              Seu capital<br />trabalha por você
+            </h1>
+
+            <div className="space-y-3 md:space-y-3.5 mb-7 md:mb-8 max-w-lg">
+              <p className="text-black text-base md:text-xl leading-snug font-medium">
+                Transforme recebíveis em caixa com agilidade, transparência e estrutura regulatória.
+              </p>
+              <p className="text-black/60 text-sm md:text-base leading-relaxed">
+                Para empresas que faturam a prazo e precisam de liquidez imediata — sem abrir mão da segurança jurídica.
+              </p>
+            </div>
+
+            <button className="inline-flex items-center gap-3 bg-black text-white text-sm md:text-lg font-medium pl-6 md:pl-8 pr-2 py-2.5 md:py-3 rounded-full hover:bg-gray-800 transition-colors duration-200">
+              Solicitar análise
+              <span className="bg-white rounded-full p-1.5 md:p-2">
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-black" />
+              </span>
+            </button>
+          </div>
+
+          <div className="relative w-full overflow-hidden pb-5 md:pb-6">
+            <div className="absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-[#F5F5F5]/90 to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-[#F5F5F5]/90 to-transparent z-10 pointer-events-none" />
             <style>{`
               @keyframes marquee {
                 0% { transform: translateX(0); }
@@ -59,7 +73,7 @@ export default function HeroSection() {
               {[...badges, ...badges].map((badge, i) => (
                 <span
                   key={i}
-                  className="mx-5 md:mx-7 shrink-0 text-black/60 whitespace-nowrap"
+                  className="mx-5 md:mx-7 shrink-0 text-black/55 whitespace-nowrap"
                   style={badge.style}
                 >
                   {badge.name}
