@@ -32,7 +32,7 @@ export default function BenefitsSection() {
             <SectionHeader
               label="Benefícios"
               title={<>Por que a<br />Aurora Asset</>}
-              description="Previsibilidade financeira com estrutura sólida — para empresas que não podem esperar o prazo."
+              description="Previsibilidade financeira com estrutura sólida para empresas que não podem esperar o prazo."
               className="mb-8 md:mb-10"
             />
 

@@ -8,11 +8,11 @@ const pillars = [
   },
   {
     title: 'Processo consultivo',
-    description: 'Entendemos o negócio antes de propor — cada operação é construída a partir do perfil da empresa.',
+    description: 'Entendemos o negócio antes de propor. Cada operação é construída a partir do perfil da empresa.',
   },
   {
     title: 'Liquidez sem burocracia',
-    description: 'Digital, ágil e com acompanhamento próximo — do envio dos documentos à proposta final.',
+    description: 'Processo digital, ágil e com acompanhamento próximo, do envio dos documentos à proposta final.',
   },
 ];
 
@@ -23,7 +23,7 @@ export default function InfoSection() {
         <SectionHeader
           label="Institucional"
           title="Sobre a Aurora Asset"
-          description="Soluções financeiras para empresas que buscam liquidez, previsibilidade e crescimento — com segurança e relacionamento de longo prazo."
+          description="Soluções financeiras para empresas que buscam liquidez, previsibilidade e crescimento, com segurança e relacionamento de longo prazo."
           align="split"
           className="mb-14 md:mb-20"
         />

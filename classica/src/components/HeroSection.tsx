@@ -47,7 +47,7 @@ export default function HeroSection() {
                 Transforme recebíveis em caixa com agilidade, transparência e estrutura regulatória.
               </p>
               <p className="text-aurora-navy/60 text-sm md:text-[0.95rem] leading-relaxed">
-                Para empresas que faturam a prazo e precisam de liquidez imediata — sem abrir mão da segurança jurídica.
+                Para empresas que faturam a prazo e precisam de liquidez imediata, sem abrir mão da segurança jurídica.
               </p>
             </div>
 

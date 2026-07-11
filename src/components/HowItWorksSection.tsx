@@ -25,7 +25,7 @@ export default function HowItWorksSection() {
         <SectionHeader
           label="Processo"
           title="Como funciona"
-          description="Do primeiro envio à proposta — três etapas objetivas, sem burocracia desnecessária."
+          description="Do primeiro envio à proposta em três etapas objetivas, sem burocracia desnecessária."
         />
 
         <ol className="steps-flow">

@@ -24,7 +24,7 @@ export default function UseCasesSection() {
           <ul className="space-y-4 border-t section-rule pt-8">
             {audiences.map((item) => (
               <li key={item} className="flex items-baseline gap-4 text-aurora-navy/75 text-base border-b section-rule pb-4">
-                <span className="text-aurora-gold/70 text-xs shrink-0">—</span>
+                <span className="text-aurora-gold/70 text-xs shrink-0">·</span>
                 {item}
               </li>
             ))}

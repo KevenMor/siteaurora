@@ -6,7 +6,7 @@ export default function ValuesMarquee() {
           Segurança, transparência e relacionamento de longo prazo orientam cada operação que estruturamos.
         </p>
         <p className="mt-5 text-white/40 text-sm md:text-base max-w-xl leading-relaxed">
-          Uma securitizadora construída para empresas que exigem clareza em cada etapa — da análise à liquidez.
+          Uma securitizadora construída para empresas que exigem clareza em cada etapa, da análise à liquidez.
         </p>
       </div>
     </section>

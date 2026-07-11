@@ -63,7 +63,7 @@ export default function ContactPage() {
                 method="POST"
                 className="space-y-8"
               >
-                <input type="hidden" name="_subject" value="Nova solicitação de análise — Aurora Asset" />
+                <input type="hidden" name="_subject" value="Nova solicitação de análise | Aurora Asset" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_next" value={nextUrl} />

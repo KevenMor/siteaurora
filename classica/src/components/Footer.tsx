@@ -56,7 +56,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link to="/contato" className="text-aurora-navy/60 hover:text-aurora-navy text-xs md:text-sm transition-colors">Solicitar análise</Link></li>
               <li><a href="mailto:contato@auroraasset.com.br" className="text-aurora-navy/60 hover:text-aurora-navy text-xs md:text-sm transition-colors">contato@auroraasset.com.br</a></li>
-              <li><span className="text-aurora-navy/60 text-xs md:text-sm">São Paulo — SP, Brasil</span></li>
+              <li><span className="text-aurora-navy/60 text-xs md:text-sm">São Paulo, SP, Brasil</span></li>
               <li><span className="text-aurora-navy/60 text-xs md:text-sm">Seg a Sex, 9h às 18h</span></li>
             </ul>
           </div>

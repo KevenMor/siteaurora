@@ -39,7 +39,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-aurora-navy/70 text-[clamp(1rem,0.35vw+0.9rem,1.2rem)] leading-relaxed col-text mb-8">
-              Antecipe recebíveis com estrutura regulatória, processo digital e atendimento consultivo — liquidez para quem fatura a prazo.
+              Antecipe recebíveis com estrutura regulatória, processo digital e atendimento consultivo. Liquidez para quem fatura a prazo.
             </p>
 
             <CtaLink to="/contato" variant="primary">
