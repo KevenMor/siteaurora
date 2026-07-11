@@ -19,16 +19,24 @@ function isActive(pathname: string, to: string) {
   return false;
 }
 
-export default function Navbar() {
+type NavbarProps = {
+  variant?: 'hero' | 'standalone';
+};
+
+export default function Navbar({ variant = 'hero' }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  const isHero = variant === 'hero';
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center bg-aurora-bg/92 backdrop-blur-sm border-b section-rule"
-      style={{ paddingInline: 'var(--gutter-x)' }}
+    <nav
+      className={
+        isHero
+          ? 'absolute top-0 left-0 right-0 z-20 px-4 md:px-6 py-4 md:py-5'
+          : 'fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4 bg-aurora-bg/92 backdrop-blur-sm border-b section-rule'
+      }
     >
-      <nav className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between max-w-[88rem] mx-auto">
         <Link to="/" className="shrink-0 leading-none" onClick={() => setOpen(false)}>
           <img
             src={auroraLogo}
@@ -36,7 +44,7 @@ export default function Navbar() {
             width={LOGO_WIDTH}
             height={LOGO_HEIGHT}
             decoding="async"
-            className="h-10 w-auto max-w-none object-contain"
+            className="h-11 md:h-12 w-auto max-w-none object-contain"
             style={{ aspectRatio: `${LOGO_WIDTH} / ${LOGO_HEIGHT}` }}
           />
         </Link>
@@ -58,37 +66,35 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden p-2 -mr-2"
+          className="md:hidden p-2"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
           aria-expanded={open}
         >
           {open ? <X className="w-6 h-6 text-aurora-navy" /> : <Menu className="w-6 h-6 text-aurora-navy" />}
         </button>
-      </nav>
+      </div>
 
       {open && (
-        <div className="md:hidden mt-4 container-aurora px-0">
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-aurora-navy/10">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  onClick={() => setOpen(false)}
-                  className={`text-base font-medium transition-colors ${
-                    isActive(pathname, link.to)
-                      ? 'text-aurora-navy'
-                      : 'text-aurora-navy/70 hover:text-aurora-navy'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+        <div className="md:hidden mt-4 bg-white rounded-2xl p-6 shadow-lg border border-aurora-navy/10">
+          <div className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.to}
+                onClick={() => setOpen(false)}
+                className={`text-base font-medium transition-colors ${
+                  isActive(pathname, link.to)
+                    ? 'text-aurora-navy'
+                    : 'text-aurora-navy/70 hover:text-aurora-navy'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}
-    </header>
+    </nav>
   );
 }

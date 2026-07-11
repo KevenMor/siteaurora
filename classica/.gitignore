@@ -10,9 +10,6 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-hostinger-public
-classica/node_modules
-classica/dist
 *.local
 
 # Editor directories and files

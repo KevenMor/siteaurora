@@ -1,14 +1,11 @@
 {
-  "name": "aurora-sec",
+  "name": "aurora-classica",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:classica": "npm run dev --prefix classica",
     "build": "tsc -b && vite build",
-    "build:classica": "npm run build --prefix classica",
-    "build:hostinger": "bash scripts/prepare-hostinger.sh",
     "lint": "eslint .",
     "preview": "vite preview"
   },

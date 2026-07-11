@@ -1,57 +1,54 @@
+import SectionHeader from './ui/SectionHeader';
+
+const steps = [
+  {
+    number: '01',
+    title: 'Envie seus documentos',
+    description: 'Cartão CNPJ e, se desejar, as notas fiscais que pretende antecipar.',
+  },
+  {
+    number: '02',
+    title: 'Análise de crédito',
+    description: 'Avaliamos o perfil da empresa, os recebíveis e as condições da operação.',
+  },
+  {
+    number: '03',
+    title: 'Receba a proposta',
+    description: 'Retorno em até 24h úteis com condições personalizadas para o seu caso.',
+  },
+];
+
 export default function HowItWorksSection() {
-  const steps = [
-    {
-      number: '01',
-      title: 'Envie seus documentos',
-      description: 'Envie o cartão CNPJ da empresa e, se desejar, anexe as notas fiscais que pretende antecipar.',
-    },
-    {
-      number: '02',
-      title: 'Análise de crédito',
-      description: 'Nossa equipe avalia os dados da empresa, os recebíveis e as condições da operação.',
-    },
-    {
-      number: '03',
-      title: 'Receba a proposta',
-      description: 'Após a análise, devolvemos uma proposta personalizada para antecipação dos seus recebíveis.',
-    },
-  ];
-
   return (
-    <section id="como-funciona" className="bg-[#F5F5F5] px-4 md:px-6 py-16 md:py-24">
-      <div className="max-w-[88rem] mx-auto">
-        <div className="mb-10 md:mb-16">
-          <p className="text-black/60 text-xs md:text-sm mb-2">Processo</p>
-          <h2
-            className="text-black text-3xl md:text-5xl font-medium leading-tight"
-            style={{ letterSpacing: '-0.03em' }}
-          >
-            Como funciona
-          </h2>
-          <p className="text-black/60 text-sm md:text-base mt-3 md:mt-4 max-w-md">
-            Três passos simples, do primeiro contato à proposta personalizada.
-          </p>
-        </div>
+    <section id="como-funciona" className="bg-aurora-surface section-pad border-y section-rule">
+      <div className="container-aurora">
+        <SectionHeader
+          label="Processo"
+          title="Como funciona"
+          description="Do primeiro envio à proposta — três etapas objetivas, sem burocracia desnecessária."
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {steps.map((step) => (
-            <div
-              key={step.number}
-              className="rounded-2xl p-6 md:p-8 min-h-48 md:min-h-64 flex flex-col justify-between"
-              style={{ backgroundColor: '#2B2644' }}
-            >
-              <span className="text-white/30 text-5xl md:text-6xl font-medium" style={{ letterSpacing: '-0.04em' }}>
-                {step.number}
-              </span>
-              <div>
-                <h3 className="text-white text-lg md:text-xl font-medium mb-2 md:mb-3" style={{ letterSpacing: '-0.02em' }}>
-                  {step.title}
-                </h3>
-                <p className="text-white/60 text-sm md:text-base leading-relaxed">{step.description}</p>
+        <ol className="steps-flow">
+          {steps.map((step, index) => (
+            <li key={step.number} className="step-card group">
+              {index < steps.length - 1 && (
+                <span className="step-connector" aria-hidden="true" />
+              )}
+
+              <div className="step-card__inner">
+                <div className="step-card__head">
+                  <span className="step-badge">Passo {index + 1}</span>
+                  <span className="step-number">{step.number}</span>
+                </div>
+
+                <div className="step-card__body">
+                  <h3 className="step-title">{step.title}</h3>
+                  <p className="step-desc">{step.description}</p>
+                </div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

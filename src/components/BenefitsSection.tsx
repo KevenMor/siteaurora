@@ -1,48 +1,59 @@
-import { Zap, Monitor, Users, Shield, SlidersHorizontal, Calendar } from 'lucide-react';
+import { Calendar, Monitor, Shield, SlidersHorizontal, Users, Zap } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import SectionHeader from './ui/SectionHeader';
 
-const benefits = [
+type Benefit = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+};
+
+const benefits: Benefit[] = [
   { icon: Zap, title: 'Capital de giro rápido', description: 'Transforme recebíveis futuros em liquidez para o fluxo de caixa da sua empresa.' },
-  { icon: Monitor, title: 'Processo simples e digital', description: 'Envio de documentos e acompanhamento da operação 100% online.' },
-  { icon: Users, title: 'Atendimento consultivo', description: 'Uma equipe próxima que entende o seu negócio antes de propor a operação.' },
-  { icon: Shield, title: 'Segurança na operação', description: 'Estrutura jurídica e documental robusta do início ao fim.' },
-  { icon: SlidersHorizontal, title: 'Proposta personalizada', description: 'Condições construídas a partir do perfil da sua empresa.' },
-  { icon: Calendar, title: 'Ideal para recebíveis a prazo', description: 'Solução desenhada para quem fatura e precisa esperar para receber.' },
+  { icon: Monitor, title: 'Processo digital', description: 'Envio de documentos e acompanhamento da operação inteiramente online.' },
+  { icon: Users, title: 'Atendimento consultivo', description: 'Uma equipe que entende o seu negócio antes de propor a operação.' },
+  { icon: Shield, title: 'Segurança jurídica', description: 'Estrutura documental robusta do início ao fim da operação.' },
+  { icon: SlidersHorizontal, title: 'Proposta sob medida', description: 'Condições construídas a partir do perfil e dos recebíveis da empresa.' },
+  { icon: Calendar, title: 'Recebíveis a prazo', description: 'Solução pensada para quem fatura e precisa esperar para receber.' },
+];
+
+const trustPoints = [
+  'Retorno em até 24h úteis',
+  'Estrutura regulatória CVM',
+  'Processo 100% digital',
 ];
 
 export default function BenefitsSection() {
   return (
-    <section id="beneficios" className="bg-[#F5F5F5] px-4 md:px-6 py-16 md:py-24">
-      <div className="max-w-[88rem] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 mb-10 md:mb-16 items-start">
-          <div>
-            <p className="text-black/60 text-xs md:text-sm mb-2">Benefícios</p>
-            <h2
-              className="text-black text-3xl md:text-5xl font-medium leading-tight"
-              style={{ letterSpacing: '-0.03em' }}
-            >
-              Por que escolher<br />a Aurora Asset
-            </h2>
-          </div>
-          <p className="text-black/70 text-xl md:text-3xl leading-relaxed">
-            Uma operação pensada para empresas que precisam de previsibilidade financeira sem abrir mão da segurança.
-          </p>
-        </div>
+    <section id="beneficios" className="bg-aurora-bg section-pad">
+      <div className="container-aurora">
+        <div className="benefits-layout">
+          <aside className="benefits-aside">
+            <SectionHeader
+              label="Benefícios"
+              title={<>Por que a<br />Aurora Asset</>}
+              description="Previsibilidade financeira com estrutura sólida — para empresas que não podem esperar o prazo."
+              className="mb-8 md:mb-10"
+            />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-          {benefits.map((benefit) => (
-            <div
-              key={benefit.title}
-              className="rounded-2xl p-5 md:p-7 min-h-44 md:min-h-56 flex flex-col justify-between bg-white"
-            >
-              <benefit.icon className="w-6 h-6 md:w-7 md:h-7 text-black/70 mb-4 md:mb-6" />
-              <div>
-                <h3 className="text-black text-base md:text-lg font-medium mb-1.5 md:mb-2" style={{ letterSpacing: '-0.02em' }}>
-                  {benefit.title}
-                </h3>
-                <p className="text-black/60 text-sm md:text-base leading-relaxed">{benefit.description}</p>
-              </div>
-            </div>
-          ))}
+            <ul className="benefits-trust">
+              {trustPoints.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </aside>
+
+          <div className="benefits-grid">
+            {benefits.map((benefit) => (
+              <article key={benefit.title} className="benefit-card group">
+                <benefit.icon className="benefit-card__icon" aria-hidden="true" />
+                <div>
+                  <h3 className="benefit-card__title">{benefit.title}</h3>
+                  <p className="benefit-card__desc">{benefit.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

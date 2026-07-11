@@ -18,8 +18,8 @@ const pillars = [
 
 export default function InfoSection() {
   return (
-    <section id="institucional" className="bg-aurora-bg section-pad">
-      <div className="container-aurora">
+    <section id="institucional" className="bg-aurora-bg px-4 md:px-6 py-20 md:py-28">
+      <div className="max-w-[88rem] mx-auto">
         <SectionHeader
           label="Institucional"
           title="Sobre a Aurora Asset"
@@ -39,7 +39,7 @@ export default function InfoSection() {
                   <h3 className="text-aurora-navy text-lg md:text-xl font-medium mb-2 tracking-[-0.02em]">
                     {pillar.title}
                   </h3>
-                  <p className="text-aurora-navy/60 text-base leading-relaxed col-text">{pillar.description}</p>
+                  <p className="text-aurora-navy/60 text-sm md:text-base leading-relaxed">{pillar.description}</p>
                 </div>
               </div>
             ))}
@@ -62,7 +62,7 @@ export default function InfoSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-aurora-navy/95 via-aurora-navy/35 to-aurora-navy/10" />
             <div className="relative z-10 h-full min-h-[22rem] md:min-h-[28rem] flex flex-col justify-end p-7 md:p-10">
               <p className="section-label text-aurora-gold mb-3">Securitizadora</p>
-              <p className="text-white text-2xl md:text-3xl font-medium leading-snug col-text tracking-[-0.03em]">
+              <p className="text-white text-2xl md:text-3xl font-medium leading-snug max-w-md tracking-[-0.03em]">
                 Especialistas em antecipação de recebíveis
               </p>
             </div>

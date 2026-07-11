@@ -6,7 +6,7 @@ const LOGO_HEIGHT = 193;
 
 export default function Footer() {
   return (
-    <footer className="bg-aurora-surface px-4 md:px-6 pt-14 md:pt-20 pb-8 border-t section-rule">
+    <footer className="bg-aurora-surface px-4 md:px-6 pt-12 md:pt-16 pb-6 md:pb-8 border-t section-rule">
       <div className="max-w-[88rem] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-12">
           <div className="sm:col-span-2 md:col-span-1">
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="section-label mb-4">Navegação</h5>
+            <h5 className="text-aurora-navy font-medium text-xs md:text-sm mb-3 md:mb-4">Navegação</h5>
             <ul className="space-y-2">
               <li><Link to="/#como-funciona" className="text-aurora-navy/60 hover:text-aurora-navy text-xs md:text-sm transition-colors">Como Funciona</Link></li>
               <li><Link to="/#beneficios" className="text-aurora-navy/60 hover:text-aurora-navy text-xs md:text-sm transition-colors">Benefícios</Link></li>
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="section-label mb-4">Legal</h5>
+            <h5 className="text-aurora-navy font-medium text-xs md:text-sm mb-3 md:mb-4">Legal</h5>
             <ul className="space-y-2">
               <li><a href="#" className="text-aurora-navy/60 hover:text-aurora-navy text-xs md:text-sm transition-colors">Política de Privacidade</a></li>
               <li><a href="#" className="text-aurora-navy/60 hover:text-aurora-navy text-xs md:text-sm transition-colors">Termos de Uso</a></li>
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           <div id="contato">
-            <h5 className="section-label mb-4">Contato</h5>
+            <h5 className="text-aurora-navy font-medium text-xs md:text-sm mb-3 md:mb-4">Contato</h5>
             <ul className="space-y-2">
               <li><Link to="/contato" className="text-aurora-navy/60 hover:text-aurora-navy text-xs md:text-sm transition-colors">Solicitar análise</Link></li>
               <li><a href="mailto:contato@auroraasset.com.br" className="text-aurora-navy/60 hover:text-aurora-navy text-xs md:text-sm transition-colors">contato@auroraasset.com.br</a></li>

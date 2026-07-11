@@ -1,0 +1,46 @@
+const values = [
+  { name: 'Segurança', style: { fontFamily: "'Times New Roman', serif", fontWeight: 400, letterSpacing: '0.02em', fontSize: '14px' } },
+  { name: 'Transparência', style: { fontFamily: "'Arial Black', sans-serif", fontWeight: 900, letterSpacing: '0.08em', fontSize: '16px' } },
+  { name: 'Inovação', style: { fontFamily: 'Impact, sans-serif', fontWeight: 700, letterSpacing: '0.05em', fontSize: '18px' } },
+  { name: 'Relacionamento', style: { fontFamily: 'Georgia, serif', fontWeight: 600, letterSpacing: '-0.02em', fontSize: '17px' } },
+  { name: 'Compliance', style: { fontFamily: 'Helvetica, sans-serif', fontWeight: 700, letterSpacing: '-0.01em', fontSize: '15px' } },
+  { name: 'Agilidade', style: { fontFamily: 'Verdana, sans-serif', fontWeight: 700, letterSpacing: '0.06em', fontSize: '14px', textTransform: 'uppercase' as const } },
+  { name: 'Confiança', style: { fontFamily: "'Courier New', monospace", fontWeight: 700, letterSpacing: '0.18em', fontSize: '14px' } },
+  { name: 'Excelência', style: { fontFamily: 'Palatino, serif', fontWeight: 500, letterSpacing: '0.03em', fontSize: '15px' } },
+];
+
+export default function ValuesMarquee() {
+  return (
+    <section className="bg-aurora-bg px-4 md:px-6 py-8 md:py-12">
+      <div className="max-w-[88rem] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 items-center">
+        <p className="text-aurora-navy/70 text-sm md:text-base leading-relaxed">
+          Nossos valores guiam<br />cada operação que realizamos.
+        </p>
+        <div className="md:col-span-3 overflow-hidden">
+          <style>{`
+            @keyframes backers-marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .backers-track {
+              display: flex;
+              width: max-content;
+              animation: backers-marquee 30s linear infinite;
+            }
+          `}</style>
+          <div className="backers-track">
+            {[...values, ...values].map((item, i) => (
+              <span
+                key={i}
+                className="mx-6 md:mx-10 shrink-0 text-aurora-navy/50 whitespace-nowrap"
+                style={item.style}
+              >
+                {item.name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
